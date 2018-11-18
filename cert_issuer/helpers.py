@@ -81,6 +81,7 @@ def prepare_issuance_batch(unsigned_certs_dir, signed_certs_dir, blockchain_cert
                                                    final_blockcerts_dir=blockchain_certs_dir,
                                                    file_extension=file_extension)
         cert_info[uid] = certificate_metadata
+        logging.info('Unsigned certificate filename is %s', uid)
 
     logging.info('Processing %d certificates', len(cert_info))
     return cert_info
